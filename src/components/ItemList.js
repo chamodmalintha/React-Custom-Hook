@@ -26,6 +26,7 @@ export const ItemList = () => {
 
         <h2>ItemList</h2>
         
+        {/* commented line */}
         {/* <button onClick={clickMe}>More info</button> */}
 
         {isLoading ? <p>Loading...</p> : error ? <p>Error!!</p> : (
