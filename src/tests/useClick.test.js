@@ -1,5 +1,6 @@
 import { useClick } from "../hooks/useClick";
 
+//use click functions
 describe('useClick', () => {
   it('should increment the counter correctly', () => {
     const { incremetCounter } = useClick();
