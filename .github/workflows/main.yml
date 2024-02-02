@@ -40,16 +40,8 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
-    - name: Build and Deploy to GitHub Pages
+    - name: Deploy with gh-pages
       run: |
-        npm run build
-        echo "chamod-custom-hook.github.io/your-react-app" > build/CNAME
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
       env:
-        CI: false
-
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.2.0
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: master
-        FOLDER: build
