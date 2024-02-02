@@ -50,6 +50,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.2.0
       with:
-        GITHUB_TOKEN: ${{ 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 }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         FOLDER: build
