@@ -43,11 +43,13 @@ jobs:
     - name: Build and Deploy to GitHub Pages
       run: |
         npm run build
-        echo "chamod-custom-hook.github.io/your-react-app"
+        echo "chamod-custom-hook.github.io/react-custom-hook" > build/CNAME
+      env:
+        CI: false
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.2.0
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: master
+        BRANCH: dev
         FOLDER: build
