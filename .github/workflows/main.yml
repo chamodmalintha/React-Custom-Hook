@@ -43,7 +43,7 @@ jobs:
     - name: Build and Deploy to GitHub Pages
       run: |
         npm run build
-        echo "chamod-custom-hook.github.io/your-react-app" > build/CNAME
+        echo "chamodmalintha.github.io/react-custom-hook" > build/CNAME
       env:
         CI: false
 
