@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useClick } from '../hooks/useClick'
 
+// testing comment
 export const Counter = () => {
     const {incremetCounter, decremetCounter} = useClick()
     const [value, setValue] = useState(0);
